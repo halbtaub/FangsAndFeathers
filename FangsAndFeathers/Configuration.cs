@@ -13,8 +13,6 @@ public class Configuration : IPluginConfiguration
 
     public bool IsConfigWindowMovable { get; set; } = true;
     public bool SomePropertyToBeSavedAndWithADefault { get; set; } = true;
-
-    public string Test { get; set; } = "JAJA";
     
     public Dictionary<uint,uint> AetheryteBeastTribeMap { get; set; } = new Dictionary<uint, uint>()
     {
