@@ -3,7 +3,7 @@ using System.Numerics;
 using Dalamud.Interface.Windowing;
 using ImGuiNET;
 
-namespace SamplePlugin.Windows;
+namespace FangsAndFeathers.Windows;
 
 public class ConfigWindow : Window, IDisposable
 {
@@ -17,7 +17,7 @@ public class ConfigWindow : Window, IDisposable
         Flags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
                 ImGuiWindowFlags.NoScrollWithMouse;
 
-        Size = new Vector2(232, 90);
+        Size = new Vector2(1032, 150);
         SizeCondition = ImGuiCond.Always;
 
         Configuration = plugin.Configuration;
@@ -55,5 +55,13 @@ public class ConfigWindow : Window, IDisposable
             Configuration.IsConfigWindowMovable = movable;
             Configuration.Save();
         }
+
+        var teststring = Configuration.Test;
+        if (ImGui.InputText("Test Text", ref teststring, 60))
+        {
+            Configuration.Test = teststring;
+            Configuration.Save();
+        }
+      
     }
 }
