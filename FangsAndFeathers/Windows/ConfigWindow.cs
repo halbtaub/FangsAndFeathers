@@ -2,6 +2,7 @@
 using System.Numerics;
 using Dalamud.Interface.Windowing;
 using ImGuiNET;
+using Lumina.Excel.Sheets;
 
 namespace FangsAndFeathers.Windows;
 
@@ -62,6 +63,38 @@ public class ConfigWindow : Window, IDisposable
             Configuration.Test = teststring;
             Configuration.Save();
         }
-      
+
+        if (ImGui.Button("TTTTTT"))
+        {
+            //Plugin.CommandManager.ProcessCommand("/tp home");
+            var a = Plugin.AetheryteList;
+            //a.Last().AetheryteData.Value.PlaceName.Value
+            var b = Plugin.DataManager.GetExcelSheet<BeastTribe>();
+
+            var c = Plugin.DataManager.GetExcelSheet<Description>();
+            var txtb = "";
+            foreach (var x in b)
+            {
+               if (x.RowId > 0)
+               {
+                   txtb += x.Name.ExtractText() + "-" + x.RowId + "\n";
+                   var gerge = x.Expansion.Value.Name.ExtractText();
+               }
+               var aasasdasddasd = "asdasd";
+            }
+            
+            var txta = "";
+            foreach (var x in a)
+            {
+                if (x.AetheryteId > 0)
+                {
+                    txta += x.AetheryteData.Value.PlaceName.Value.Name.ExtractText() + "-" + x.AetheryteId + "\n";
+                    var gerge = x;
+                }
+            }
+            
+            var aasdasd = "asdasd";
+
+        }
     }
 }

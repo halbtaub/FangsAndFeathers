@@ -1,7 +1,7 @@
 {
-  "Author": "your name here",
-  "Name": "Sample Plugin",
-  "Punchline": "A short one-liner that shows up in /xlplugins.",
+  "Author": "Halbtaub & Amira",
+  "Name": "Fangs And Feathers",
+  "Punchline": "Have an easier life completing the Beast Tribes",
   "Description": "A description that shows up in /xlplugins. List any major slash-command(s).",
   "ApplicableVersion": "any",
   "Tags": [
